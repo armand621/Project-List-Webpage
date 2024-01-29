@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf8" /> 
+  <meta http-equiv="Content-Type" content="text/html;" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <title>Project List</title>
+</head>
+<body class="noMargin">
+
+  <div class="noMargin head">
+    <h1 class="text-center bgViolet noMargin padding10">
+      Project Lists
+    
+    </h1>
+  
+  </div>
+  
+  
+  <div class="container">
+    
+  </div>
+  
+  <div class="footer text-center">
+    <p>
+      Made by: Armand Robin Tangonan
+      <br>
+      &copy January 2024
+    
+    </p>
+  
+  </div>
+  
+  
+  <!--
+    Stylesheet
+  
+  -->
+  <style type="text/css">
+    :root{
+    
+      --violet: #673ab7;
+      --txt-color: #ffffff; /*#ffffff;*/
+      --lato: "Lato", sans-serif;
+      --black: #686868; /*#4d4d4d;*/
+    
+    }
+    
+    *{
+      font-family: var(--lato);
+    }
+  
+    .text-center{
+      text-align: center;
+    }
+    
+    .bgViolet{
+      color: var(--txt-color);
+      background-color: var(--violet);
+    
+    }
+    
+    .head{
+      top: 0;
+      position: sticky;
+    
+    }
+    
+    .container{
+      margin: 10px 0 0 0;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    
+    .}
+    
+    
+    
+    .childFormat{
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     text-align: center;
+     width: 85%;
+     box-shadow: 0px 0px 1px var(--violet);
+     border-radius: 5px;
+     padding: 20px 0;
+    
+    }
+    
+    .noMargin{
+      margin: 0;
+    
+    }
+    
+    .padding10{
+      padding: 20px 0;
+    
+    }
+    
+    .img80{
+      width: 80%;
+      align-self: center;
+      border-radius: 10px;
+    
+    }
+    
+    .container > div{
+      margin: 50px 0 0 0;
+    
+    }
+    
+    
+      
+    
+    
+    
+    .child > h1{
+      color: var(--violet);
+      width: 80%;
+      align-self: center;
+      text-align: center;
+      font-weight: 700;
+    }
+    
+    .child > p{
+      width: 80%;
+      align-self: center;
+      text-align: left;
+      font-size: 20px;
+      line-height: 1.5em;
+      font-weight: 400;
+      color: var(--black);
+    
+    }
+    
+    .footer{
+      margin: 50px 0 0 0;
+      background-color: var(--violet);
+      color: var(--txt-color);
+      padding: 5px;
+      font-size: 15px;
+      line-height: 1.5em;
+    
+    }
+  
+  </style>
+
+
+  <!--
+    JavaScript
+  
+  -->
+  
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js">
+
+  </script>
+  
+  
+  
+  
+  <script type="text/javascript">
+ 
+    const container = document.querySelector('.container')
+    
+    function generateProjects(){
+    
+      function childEl(data, title){ return `
+        <div class="child childFormat">
+          <h1>Project ${data} - ${title}</h1>
+     
+      	  <img src="./img/img${data}.png" class="img80">
+      
+      
+          <p>
+      		Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      
+      	  </p>
+      	</div>
+      
+      
+      
+      `
+      
+      }
+      
+      let titles = [
+        "Software Development",
+        "Laravel Development",
+        "Java Development",
+        "C# using .NET Development",
+        "Web Design Development"
+        
+      ]
+    
+    
+    
+      for(let i = 0; i < titles.length; i++){
+        container.innerHTML += childEl(i+1, titles[i])
+    
+      }
+    
+    }
+    
+    generateProjects()
+  
+  </script>
+  
+  
+</body>
+</html>
